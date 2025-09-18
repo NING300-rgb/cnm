@@ -1,0 +1,1829 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辽东学院银杏文化节 - 邀请函</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置Tailwind自定义颜色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ginkgo: {
+                            light: '#FFF8E6',
+                            DEFAULT: '#F9D777',
+                            dark: '#E6B85C',
+                            darker: '#C89A3E'
+                        },
+                        autumn: {
+                            red: '#E86A3C',
+                            orange: '#F5A65B',
+                            brown: '#8D5B3F',
+                            light: '#FDF1E0',
+                            green: '#7D9D6A',
+                            purple: '#A67C52'
+                        },
+                        art: {
+                            blue: '#4A7AB8',
+                            pink: '#E8A0A0',
+                            yellow: '#F2D261'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['"Ma Shan Zheng"', 'Georgia', 'serif'],
+                        display: ['"Noto Serif SC"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 引入中文字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&amp;family=Noto+Serif+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .text-shadow-lg {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            }
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            .animate-float-slow {
+                animation: float 8s ease-in-out infinite;
+            }
+            .animate-float-fast {
+                animation: float 4s ease-in-out infinite;
+            }
+            .animate-sway {
+                animation: sway 6s ease-in-out infinite;
+            }
+            .animate-fade-in {
+                animation: fadeIn 1.5s ease-out forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 1s ease-out forwards;
+            }
+            .animate-pulse-soft {
+                animation: pulseSoft 3s ease-in-out infinite;
+            }
+            .animate-fall {
+                animation: fall 15s linear infinite;
+            }
+            .animate-page-in {
+                animation: pageIn 0.8s ease-out forwards;
+            }
+            .animate-page-out {
+                animation: pageOut 0.5s ease-in forwards;
+            }
+            .bg-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f9d777' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+            .leaf-rotate-1 {
+                transform: rotate(-15deg);
+            }
+            .leaf-rotate-2 {
+                transform: rotate(10deg);
+            }
+            .leaf-rotate-3 {
+                transform: rotate(-5deg) scale(0.8);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .image-zoom-container {
+                overflow: hidden;
+            }
+            .image-zoom {
+                transition: transform 0.5s ease;
+            }
+            .image-zoom:hover {
+                transform: scale(1.05);
+            }
+            .nav-item {
+                position: relative;
+            }
+            .nav-item::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: theme('colors.ginkgo.dark');
+                transition: width 0.3s ease;
+            }
+            .nav-item:hover::after {
+                width: 100%;
+            }
+            .art-card {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .art-card:hover {
+                transform: translateY(-8px) rotate(1deg);
+            }
+            .page {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .page.active {
+                display: block;
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes sway {
+            0% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(-5deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes pulseSoft {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pageIn {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes pageOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(-50px); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-ginkgo-light to-white min-h-screen font-sans overflow-x-hidden bg-pattern">
+    <!-- 飘落的银杏叶动画（装饰元素） -->
+    <div id="falling-leaves" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa fa-leaf text-ginkgo-dark text-xl animate-pulse-soft"></i>
+                <span class="font-serif font-bold text-autumn-brown text-lg">辽东学院</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#highlights" class="text-sm text-autumn-brown hover:text-ginkgo-dark transition-colors nav-item">活动亮点</a>
+                <a href="#details" class="text-sm text-autumn-brown hover:text-ginkgo-dark transition-colors nav-item">活动详情</a>
+                <a href="#art-college" class="text-sm text-autumn-brown hover:text-art-blue transition-colors nav-item">艺术学院</a>
+                <a href="#gallery" class="text-sm text-autumn-brown hover:text-ginkgo-dark transition-colors nav-item">校园秋韵</a>
+                <a href="#countdown" class="text-sm text-autumn-brown hover:text-ginkgo-dark transition-colors nav-item">倒计时</a>
+            </div>
+            <div class="text-sm text-autumn-brown flex items-center">
+                <i class="fa fa-calendar-o mr-1"></i> 
+                <span>2025年10月26-28日</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 邀请函头部 -->
+    <header class="relative pt-24 pb-20 px-4 overflow-hidden">
+        <!-- 背景银杏叶装饰 -->
+        <div class="absolute top-10 left-5 w-16 h-16 text-ginkgo/30 animate-float-slow">
+            <i class="fa fa-leaf text-5xl transform rotate-12"></i>
+        </div>
+        <div class="absolute top-30 right-10 w-20 h-20 text-ginkgo-dark/20 animate-float">
+            <i class="fa fa-leaf text-6xl transform -rotate-12"></i>
+        </div>
+        <div class="absolute bottom-10 left-1/4 w-12 h-12 text-autumn-orange/20 animate-float-fast">
+            <i class="fa fa-leaf text-4xl transform rotate-45"></i>
+        </div>
+        
+        <div class="container mx-auto text-center relative z-10">
+            <div class="inline-block mb-6 animate-fade-in">
+                <span class="inline-block bg-autumn-orange/10 text-autumn-orange px-5 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                    <i class="fa fa-map-marker mr-1"></i> 辽东学院 · 银杏大道
+                </span>
+            </div>
+            
+            <div class="relative inline-block mb-6">
+                <h1 class="font-serif font-bold text-[clamp(2.5rem,8vw,4rem)] text-autumn-brown leading-tight animate-slide-up text-shadow-lg" style="animation-delay: 0.2s">
+                    银杏文化节
+                </h1>
+                <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-ginkgo to-transparent"></div>
+            </div>
+            
+            <p class="text-[clamp(1.2rem,4vw,1.8rem)] text-autumn-brown/80 max-w-md mx-auto animate-slide-up font-display" style="animation-delay: 0.4s">
+                秋意浓，杏叶黄，与你共赴金色之约
+            </p>
+            
+            <div class="mt-10 animate-slide-up" style="animation-delay: 0.6s">
+                <a href="#details" class="inline-block animate-bounce bg-white/50 backdrop-blur-sm p-2 rounded-full shadow-md hover:bg-white/80 transition-colors">
+                    <i class="fa fa-angle-down text-ginkgo-dark text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主视觉区域 -->
+    <section class="relative px-4 py-10 bg-gradient-to-b from-white to-autumn-light/50">
+        <div class="container mx-auto">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl max-w-2xl mx-auto transform transition-all duration-700 hover:shadow-ginkgo/20 hover:scale-[1.01] group">
+                <div class="image-zoom-container">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/396a659a64c94419a00e30c84675b19d~tplv-a9rns2rl98-image.image?rcl=20250916142034C3D64F2C551A9A051BE8&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758608435&amp;x-signature=QnSerfpc1J3I%2Fsr5f%2BLLuMMlreU%3D" alt="金黄的银杏叶铺满校园小径" class="w-full h-auto image-zoom">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end">
+                    <div class="p-8 text-white text-left">
+                        <p class="text-ginkgo font-medium mb-2 opacity-0 animate-fade-in" style="animation-delay: 0.3s; animation-fill-mode: forwards;">一年一度 · 如约而至</p>
+                        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-2 opacity-0 animate-fade-in" style="animation-delay: 0.6s; animation-fill-mode: forwards;">第九届校园银杏文化节</h2>
+                        <p class="text-white/80 opacity-0 animate-fade-in" style="animation-delay: 0.9s; animation-fill-mode: forwards;">与你共赏校园最美秋色</p>
+                    </div>
+                </div>
+                
+                <!-- 装饰性日期标签 -->
+                <div class="absolute top-4 right-4 bg-ginkgo text-autumn-brown font-bold px-4 py-2 rounded-lg shadow-lg transform rotate-3 animate-pulse-soft">
+                    10.26-28
+                </div>
+                
+                <!-- 收藏按钮 -->
+                <button class="absolute top-4 left-4 bg-white/30 backdrop-blur-sm text-white p-2 rounded-full shadow-md hover:bg-white/50 transition-colors" id="favoriteBtn">
+                    <i class="fa fa-heart-o"></i>
+                </button>
+                
+                <!-- 分享按钮 -->
+                <button class="absolute bottom-8 right-8 bg-white/30 backdrop-blur-sm text-white p-2 rounded-full shadow-md hover:bg-white/50 transition-colors group" id="shareBtn">
+                    <i class="fa fa-share-alt"></i>
+                    <span class="absolute right-full mr-2 bottom-0 bg-autumn-brown text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">分享活动</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动亮点 -->
+    <section id="highlights" class="px-4 py-16 relative overflow-hidden">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-[clamp(1.8rem,5vw,3rem)] text-autumn-brown font-bold mb-4 relative inline-block">
+                    活动亮点
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-ginkgo/50 rounded-full"></span>
+                </h2>
+                <p class="text-gray-600 max-w-md mx-auto">四大主题活动，带你领略不一样的银杏季</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 亮点1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="h-48 overflow-hidden image-zoom-container">
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/057b8da3b2754f0284d00f45594725e6~tplv-a9rns2rl98-image.image?rcl=20250916142135B985422CEB4C21640019&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758608495&amp;x-signature=or8gUc6wTetU%2B31CMsGTpS%2FLmNQ%3D" alt="银杏摄影大赛" class="w-full h-full object-cover image-zoom">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-ginkgo/20 rounded-full flex items-center justify-center mb-4 text-ginkgo-dark">
+                            <i class="fa fa-camera text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-autumn-brown text-xl mb-2">银杏摄影大赛</h3>
+                        <p class="text-gray-600 text-sm">用镜头捕捉校园金秋美景，记录银杏大道的金色瞬间，优秀作品将在校园展出并赢取丰厚奖品。</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-xs text-gray-500"><i class="fa fa-clock-o mr-1"></i> 10月26日 10:00-16:00</span>
+                        </div>
+                        <button class="mt-4 text-ginkgo-dark text-sm font-medium flex items-center gap-1 hover:text-ginkgo transition-colors">
+                            <span>了解详情</span>
+                            <i class="fa fa-angle-right transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 亮点2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="h-48 overflow-hidden image-zoom-container">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/73f2f7e0a94945afb6b90a0be872058b~tplv-a9rns2rl98-image.image?rcl=202509161433424B033B7E2D6DFAC454A9&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758609222&amp;x-signature=f9irzOK%2FgxWD%2Ffr37HMcPIiuWTI%3D" alt="秋日音乐会" class="w-full h-full object-cover image-zoom">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-ginkgo/20 rounded-full flex items-center justify-center mb-4 text-ginkgo-dark">
+                            <i class="fa fa-music text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-autumn-brown text-xl mb-2">秋日音乐会</h3>
+                        <p class="text-gray-600 text-sm">校园乐队现场演出，在金黄的银杏树下，聆听秋日乐章，感受音乐与自然的完美融合。</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-xs text-gray-500"><i class="fa fa-clock-o mr-1"></i> 10月27日 14:00-17:00</span>
+                        </div>
+                        <button class="mt-4 text-ginkgo-dark text-sm font-medium flex items-center gap-1 hover:text-ginkgo transition-colors">
+                            <span>了解详情</span>
+                            <i class="fa fa-angle-right transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 亮点3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="h-48 overflow-hidden image-zoom-container">
+                        <img src="https://p3-search.byteimg.com/obj/tos-cn-i-qvj2lq49k0/616c3c5715b14aa59c0d699dc36c0144" alt="银杏文创市集" class="w-full h-full object-cover image-zoom">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-ginkgo/20 rounded-full flex items-center justify-center mb-4 text-ginkgo-dark">
+                            <i class="fa fa-shopping-bag text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-autumn-brown text-xl mb-2">银杏文创市集</h3>
+                        <p class="text-gray-600 text-sm">手工艺品、校园纪念品、秋日美食，还有银杏主题DIY工作坊，体验亲手制作的乐趣。</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-xs text-gray-500"><i class="fa fa-clock-o mr-1"></i> 10月28日 9:00-16:00</span>
+                        </div>
+                        <button class="mt-4 text-ginkgo-dark text-sm font-medium flex items-center gap-1 hover:text-ginkgo transition-colors">
+                            <span>了解详情</span>
+                            <i class="fa fa-angle-right transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 亮点4 - 新增艺术学院特色活动 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl group">
+                    <div class="h-48 overflow-hidden image-zoom-container">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/e61b89691c904800bbc363312e09b429~tplv-a9rns2rl98-image.image?rcl=20250916145122D941DE4A0A58E922BE67&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1758610287&amp;x-signature=KLM7HXH0%2F%2BprnfpoJbrz%2BpxY3IY%3D" alt="银杏艺术创作展" class="w-full h-full object-cover image-zoom">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-art-blue/20 rounded-full flex items-center justify-center mb-4 text-art-blue">
+                            <i class="fa fa-paint-brush text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-art-blue text-xl mb-2">银杏艺术创作展</h3>
+                        <p class="text-gray-600 text-sm">艺术学院师生联袂呈现，以银杏为主题的绘画、雕塑、装置艺术等多元创作，展现艺术与自然之美。</p>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-xs text-gray-500"><i class="fa fa-clock-o mr-1"></i> 全程展出 9:00-17:00</span>
+                        </div>
+                        <button class="mt-4 text-art-blue text-sm font-medium flex items-center gap-1 hover:text-art-blue/80 transition-colors">
+                            <span>了解详情</span>
+                            <i class="fa fa-angle-right transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活动详情 -->
+    <section id="details" class="px-4 py-16 bg-gradient-to-b from-autumn-light/30 to-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-[clamp(1.5rem,3vw,2.5rem)] text-autumn-brown font-bold mb-3">活动详情</h2>
+                <div class="w-20 h-1 bg-ginkgo mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 时间地点 -->
+                <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-ginkgo/20 p-3 rounded-full text-ginkgo-dark">
+                            <i class="fa fa-clock-o text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-autumn-brown text-lg mb-2">时间 &amp; 地点</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors">
+                                    <i class="fa fa-calendar text-ginkgo-dark/70 mt-0.5"></i>
+                                    <span>2025年10月26日 - 10月28日</span>
+                                </li>
+                                <li class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors">
+                                    <i class="fa fa-map-marker text-ginkgo-dark/70 mt-0.5"></i>
+                                    <span>辽东学院主校区 · 银杏大道及各活动场地</span>
+                                </li>
+                                <li class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors">
+                                    <i class="fa fa-sun-o text-ginkgo-dark/70 mt-0.5"></i>
+                                    <span>每日 9:00 - 17:00</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 活动日程 - 增加翻页效果 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:shadow-lg">
+                    <div class="bg-gradient-to-r from-ginkgo to-ginkgo-dark p-4">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-white/30 p-2 rounded-full text-white">
+                                <i class="fa fa-calendar-check-o"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-lg">活动日程安排</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <!-- 日程表翻页控制 -->
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="text-autumn-brown font-medium" id="schedulePageTitle">10月26日 活动安排</div>
+                            <div class="flex gap-2">
+                                <button id="prevSchedule" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-autumn-light hover:text-autumn-brown transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                    <i class="fa fa-angle-left"></i>
+                                </button>
+                                <button id="nextSchedule" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-autumn-light hover:text-autumn-brown transition-colors">
+                                    <i class="fa fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 日程表翻页容器 -->
+                        <div id="scheduleContainer" class="relative min-h-[300px]">
+                            <!-- 第一天 -->
+                            <div class="schedule-page active">
+                                <div class="space-y-3 pl-12 relative schedule-details">
+                                    <!-- 连接线 -->
+                                    <div class="absolute left-5 top-0 bottom-0 w-px bg-ginkgo/30"></div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">09:00 - 10:00 开幕式</div>
+                                            <p class="text-gray-600 text-sm mt-1">银杏大道主舞台，校领导致辞，文化节正式启动</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">10:00 - 16:00 银杏摄影大赛</div>
+                                            <p class="text-gray-600 text-sm mt-1">全天进行，作品提交截止至17:00</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">14:00 - 16:00 银杏知识讲座</div>
+                                            <p class="text-gray-600 text-sm mt-1">图书馆报告厅，了解银杏文化与植物知识</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-art-blue rounded-full"></div>
+                                        <div class="bg-art-blue/10 p-3 rounded-lg hover:bg-art-blue/20 transition-colors cursor-pointer">
+                                            <div class="font-medium text-art-blue">15:00 - 17:00 艺术创作工作坊</div>
+                                            <p class="text-gray-600 text-sm mt-1">艺术学院画室，银杏叶手工制作体验</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 第二天 -->
+                            <div class="schedule-page hidden">
+                                <div class="space-y-3 pl-12 relative schedule-details">
+                                    <div class="absolute left-5 top-0 bottom-0 w-px bg-ginkgo/30"></div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-art-pink rounded-full"></div>
+                                        <div class="bg-art-pink/10 p-3 rounded-lg hover:bg-art-pink/20 transition-colors cursor-pointer">
+                                            <div class="font-medium text-art-pink">10:00 - 12:00 银杏主题绘画</div>
+                                            <p class="text-gray-600 text-sm mt-1">美术学院组织，现场创作体验</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">14:00 - 17:00 秋日音乐会</div>
+                                            <p class="text-gray-600 text-sm mt-1">银杏大道中心舞台，校园乐队表演</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-art-blue rounded-full"></div>
+                                        <div class="bg-art-blue/10 p-3 rounded-lg hover:bg-art-blue/20 transition-colors cursor-pointer">
+                                            <div class="font-medium text-art-blue">16:00 - 17:30 艺术创作展揭幕</div>
+                                            <p class="text-gray-600 text-sm mt-1">艺术学院展厅，师生银杏主题作品展示</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 第三天 -->
+                            <div class="schedule-page hidden">
+                                <div class="space-y-3 pl-12 relative schedule-details">
+                                    <div class="absolute left-5 top-0 bottom-0 w-px bg-ginkgo/30"></div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">09:00 - 16:00 银杏文创市集</div>
+                                            <p class="text-gray-600 text-sm mt-1">各类手工艺品、美食与DIY体验</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-art-yellow rounded-full"></div>
+                                        <div class="bg-art-yellow/10 p-3 rounded-lg hover:bg-art-yellow/20 transition-colors cursor-pointer">
+                                            <div class="font-medium text-art-yellow">10:00 - 12:00 银杏叶脉书签制作</div>
+                                            <p class="text-gray-600 text-sm mt-1">艺术学院手工教室，限量体验</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative schedule-item">
+                                        <div class="absolute left-[-36px] top-1 w-3 h-3 bg-ginkgo rounded-full"></div>
+                                        <div class="bg-autumn-light/30 p-3 rounded-lg hover:bg-autumn-light/50 transition-colors cursor-pointer">
+                                            <div class="font-medium text-autumn-brown">15:00 - 16:30 闭幕式与颁奖</div>
+                                            <p class="text-gray-600 text-sm mt-1">摄影大赛颁奖，文化节圆满结束</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 参与方式 -->
+                <div class="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-ginkgo/20 p-3 rounded-full text-ginkgo-dark">
+                            <i class="fa fa-ticket text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-autumn-brown text-lg mb-2">参与方式</h3>
+                            <p class="text-gray-700 mb-4">本届银杏文化节面向全校师生开放，部分活动需提前报名</p>
+                            <button id="registerBtn" class="bg-gradient-to-r from-ginkgo to-ginkgo-dark text-white font-medium px-6 py-3 rounded-full shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group">
+                                <i class="fa fa-check-circle group-hover:scale-110 transition-transform"></i>
+                                <span>我要报名参加</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 艺术学院特色区域 -->
+    <section id="art-college" class="px-4 py-16 bg-gradient-to-br from-art-blue/5 to-art-pink/5 relative overflow-hidden">
+        <!-- 装饰元素 -->
+        <div class="absolute top-20 right-10 w-32 h-32 text-art-blue/10 animate-float-slow">
+            <i class="fa fa-paint-brush text-[100px] transform rotate-45"></i>
+        </div>
+        <div class="absolute bottom-10 left-10 w-24 h-24 text-art-pink/10 animate-float">
+            <i class="fa fa-magic text-[80px] transform -rotate-12"></i>
+        </div>
+        
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-[clamp(1.8rem,5vw,3rem)] text-art-blue font-bold mb-4 relative inline-block">
+                    艺术学院特别呈现
+                    <span class="absolute -bottom-2 left-0 w-full h-1 bg-art-blue/50 rounded-full"></span>
+                </h2>
+                <p class="text-gray-600 max-w-md mx-auto">以银杏为媒，以艺术为介，感受自然与创意的碰撞</p>
+            </div>
+            
+            <!-- 艺术学院简介 -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 mb-12 transform transition-all duration-500 hover:shadow-xl">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/3">
+                        <div class="rounded-xl overflow-hidden shadow-md">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/3ab9ad17fb854b67952cd93fae18be0b~tplv-a9rns2rl98-image.image?rcl=20250916152501816B4D54CE20DF77E67A&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612302&amp;x-signature=KuZzcJ0eNyUavjVEye40G1XzpbE%3D" alt="辽东学院艺术学院教学楼" class="w-full h-auto">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="font-serif text-2xl font-bold text-art-blue mb-4">艺术学院简介</h3>
+                        <p class="text-gray-700 mb-4">
+                            辽东学院艺术学院致力于培养具有创新精神和实践能力的高素质艺术人才。学院设有视觉传达设计、环境设计、产品设计等多个专业方向，注重传统与现代结合，理论与实践并重。
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            在本届银杏文化节中，艺术学院师生将带来丰富多彩的艺术活动，通过绘画、雕塑、装置、手工等多种形式，展现银杏之美，传递秋日情怀。
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-art-blue/10 text-art-blue px-3 py-1 rounded-full text-sm">视觉传达</span>
+                            <span class="bg-art-pink/10 text-art-pink px-3 py-1 rounded-full text-sm">环境设计</span>
+                            <span class="bg-art-yellow/10 text-art-yellow px-3 py-1 rounded-full text-sm">产品设计</span>
+                            <span class="bg-autumn-green/10 text-autumn-green px-3 py-1 rounded-full text-sm">民间艺术</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 艺术学院特色活动 -->
+            <h3 class="font-serif text-xl font-bold text-art-blue mb-6 text-center">特色艺术活动</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 艺术活动1 -->
+                <div class="art-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/359ea8d42dec4453a8b600867ffcbbc0~tplv-a9rns2rl98-image.image?rcl=2025091614540139FDB40151BDA80E6DD1&amp;rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1758610445&amp;x-signature=oxZYNXmfXaj0QyRLdnZwxnJPhrY%3D" alt="银杏主题绘画展" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-art-blue text-lg mb-2">银杏主题绘画展</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            艺术学院师生以银杏为主题创作的绘画作品，包括油画、水彩、国画等多种形式，展现银杏在不同艺术视角下的美。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fa fa-map-marker mr-1"></i> 艺术学院展厅</span>
+                            <span class="text-xs bg-art-blue/10 text-art-blue px-2 py-1 rounded-full">全程展出</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 艺术活动2 -->
+                <div class="art-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/pgc-image/320c33f19e85456190354458ff37f784" alt="银杏叶手工工作坊" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-art-pink text-lg mb-2">银杏叶手工工作坊</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            由艺术学院老师指导，教你如何利用银杏叶制作精美的手工艺品，如书签、装饰画、立体摆件等，体验创作的乐趣。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fa fa-map-marker mr-1"></i> 艺术学院手工教室</span>
+                            <span class="text-xs bg-art-pink/10 text-art-pink px-2 py-1 rounded-full">需预约</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 艺术活动3 -->
+                <div class="art-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://p3-search.byteimg.com/obj/labis/07f872f10933da4f6da5f951aa34e5fa" alt="银杏装置艺术展" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-art-yellow text-lg mb-2">银杏装置艺术展</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            大型户外装置艺术作品，使用银杏叶和其他环保材料创作，展现自然与艺术的完美融合，是拍照打卡的绝佳地点。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs text-gray-500"><i class="fa fa-map-marker mr-1"></i> 银杏大道中段</span>
+                            <span class="text-xs bg-art-yellow/10 text-art-yellow px-2 py-1 rounded-full">全程展出</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校园美景展示 - 增加翻页效果 -->
+    <section id="gallery" class="px-4 py-16 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-[clamp(1.5rem,3vw,2.5rem)] text-autumn-brown font-bold mb-3">校园秋韵</h2>
+                <p class="text-gray-600 max-w-md mx-auto">往年银杏季的美好瞬间，今年与你再续前缘</p>
+            </div>
+            
+            <!-- 图片翻页控制 -->
+            <div class="flex justify-center gap-2 mb-8">
+                <button id="prevGallery" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-autumn-light hover:text-autumn-brown transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <span id="galleryPageInfo" class="flex items-center text-gray-600">第 1 页 / 共 2 页</span>
+                <button id="nextGallery" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-autumn-light hover:text-autumn-brown transition-colors">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+            
+            <!-- 图片翻页容器 -->
+            <div id="galleryContainer" class="relative max-w-5xl mx-auto">
+                <!-- 第一页图片 -->
+                <div class="gallery-page active">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/fe1f05ac0b4c481faba574759e1f2b68~tplv-a9rns2rl98-image.image?rcl=202509161418515F143C56449D392ABA60&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758608331&amp;x-signature=O0Q39me9mu%2F4qgA3z%2BAtlukX75o%3D" alt="阳光下金黄的银杏叶" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 mt-6 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1544247583-4e86292510e4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-search.byteimg.com/obj/labis/panoramic_aaf33a58703cca868c6b7eff2f95101f_f" alt="学生在银杏树下阅读" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1576613232377-82036b843322?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-search.byteimg.com/obj/pgc-image/4f771694c73541aeb77d344e771a89c3" alt="铺满银杏叶的校园小径" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 mt-6 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/0208cf1129b74bdfaf4725555c5ae956~tplv-a9rns2rl98-image.image?rcl=202509161522353BCFC2657707498A0E6C&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612156&amp;x-signature=LAZ8sg%2BJSvkv1bZPw9JBIz9dcxc%3D" alt="银杏树下的集体活动" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第二页图片 -->
+                <div class="gallery-page hidden">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1558610331-9043cc619110?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/4e39c5994d2040cdaa15773d1501f88c~tplv-a9rns2rl98-image.image?rcl=202509161524162302611CE7ABFA4EA6E4&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612256&amp;x-signature=AsuFsxaSx2urEcEOb6NeSsMkPjc%3D" alt="银杏叶特写" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 mt-6 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1544247583-4e86292510e4?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/73dade3358594b2d9e4d4200fd735ec3~tplv-a9rns2rl98-image.image?rcl=202509161524270BF2C1C3644E755C60E6&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612267&amp;x-signature=EMJEb2IVcN4TCTsGxwVDeMQ9Hfg%3D" alt="校园建筑与银杏" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/9a7738c7e19c41c192613fcc55c627e5~tplv-a9rns2rl98-image.image?rcl=202509161524380BF2C1C3644E755C69E3&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612279&amp;x-signature=%2BFqbHmmyaberVc110aDr%2B1ovPJM%3D" alt="艺术学院银杏装置" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 mt-6 cursor-pointer gallery-item" data-img="https://images.unsplash.com/photo-1544842354-1b24107c9469?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80">
+                            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/0298ba5896a844e4b2d1ffcf97cdc7e0~tplv-a9rns2rl98-image.image?rcl=202509161524490BF2C1C3644E755C7206&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1758612290&amp;x-signature=QHlA1gXWk%2F79NUH%2FcN%2FU3JpVA7E%3D" alt="银杏文创作品" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 查看更多按钮 -->
+            <div class="text-center mt-10">
+                <button id="loadMoreBtn" class="bg-white border-2 border-ginkgo text-ginkgo-dark font-medium px-6 py-2 rounded-full hover:bg-ginkgo hover:text-white transition-colors duration-300 flex items-center gap-2 mx-auto group">
+                    <span>加载更多照片</span>
+                    <i class="fa fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 图片查看器模态框 -->
+    <div id="imageViewer" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <button id="closeViewer" class="absolute top-4 right-4 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors z-10">
+            <i class="fa fa-times text-xl"></i>
+        </button>
+        <button id="prevImage" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors z-10">
+            <i class="fa fa-angle-left text-2xl"></i>
+        </button>
+        <button id="nextImage" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors z-10">
+            <i class="fa fa-angle-right text-2xl"></i>
+        </button>
+        <div class="max-w-4xl max-h-[80vh]">
+            <img id="viewerImage" src="" alt="大图预览" class="max-w-full max-h-[80vh] object-contain transition-opacity duration-300">
+        </div>
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+            <span id="imageCounter">1/8</span>
+        </div>
+    </div>
+
+    <!-- 倒计时 -->
+    <section id="countdown" class="px-4 py-16 relative overflow-hidden bg-gradient-to-r from-autumn-light to-ginkgo-light/50">
+        <!-- 背景装饰 -->
+        <div class="absolute -top-20 -right-20 w-64 h-64 text-ginkgo/10 animate-float-slow">
+            <i class="fa fa-leaf text-[200px] transform rotate-45"></i>
+        </div>
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 text-autumn-orange/10 animate-float">
+            <i class="fa fa-leaf text-[120px] transform -rotate-12"></i>
+        </div>
+        
+        <div class="container mx-auto max-w-2xl relative z-10">
+            <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+                <h2 class="font-serif text-[clamp(1.5rem,3vw,2rem)] text-autumn-brown font-bold mb-6 relative inline-block">
+                    距离文化节开幕还有
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-ginkgo/30"></span>
+                </h2>
+                
+                <div class="flex justify-center gap-4 md:gap-6">
+                    <div class="flex flex-col items-center">
+                        <div id="days" class="bg-ginkgo text-autumn-brown font-bold text-2xl md:text-3xl w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-105">00</div>
+                        <span class="text-gray-600 text-xs md:text-sm mt-2">天</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div id="hours" class="bg-ginkgo text-autumn-brown font-bold text-2xl md:text-3xl w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-105">00</div>
+                        <span class="text-gray-600 text-xs md:text-sm mt-2">时</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div id="minutes" class="bg-ginkgo text-autumn-brown font-bold text-2xl md:text-3xl w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-105">00</div>
+                        <span class="text-gray-600 text-xs md:text-sm mt-2">分</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div id="seconds" class="bg-ginkgo text-autumn-brown font-bold text-2xl md:text-3xl w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-105">00</div>
+                        <span class="text-gray-600 text-xs md:text-sm mt-2">秒</span>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <p class="text-gray-600 mb-4">分享给好友，一起相约银杏季</p>
+                    <div class="flex justify-center gap-4">
+                        <a href="https://twitter.com/intent/tweet?text=辽东学院银杏文化节，10月26-28日，与你共赴金色之约" class="bg-[#1DA1F2]/10 text-[#1DA1F2] w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-[#1DA1F2]/20 hover:scale-110">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://ldu-ginkgo-festival.example.com" class="bg-[#4267B2]/10 text-[#4267B2] w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-[#4267B2]/20 hover:scale-110">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="whatsapp://send?text=辽东学院银杏文化节，10月26-28日，与你共赴金色之约 - https://ldu-ginkgo-festival.example.com" class="bg-[#25D366]/10 text-[#25D366] w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-[#25D366]/20 hover:scale-110">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/share?url=https://ldu-ginkgo-festival.example.com" class="bg-[#E4405F]/10 text-[#E4405F] w-10 h-10 rounded-full flex items-center justify-center transition-all hover:bg-[#E4405F]/20 hover:scale-110">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部宣传语 -->
+    <section class="px-4 py-16 bg-autumn-brown text-white text-center relative overflow-hidden">
+        <!-- 装饰元素 -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-ginkgo to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-ginkgo to-transparent"></div>
+        
+        <div class="container mx-auto max-w-2xl relative z-10">
+            <div class="text-[clamp(1.5rem,5vw,2.5rem)] font-serif font-bold mb-6 leading-tight animate-pulse-soft">
+                金色校园，等你共赏
+            </div>
+            <p class="text-white/80 mb-8 max-w-md mx-auto">
+                秋风起，杏叶黄，一年一度的银杏文化节即将来临，让我们在金色的校园里，共同创造美好回忆
+            </p>
+            <button id="remindBtn" class="bg-white text-autumn-brown font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 mx-auto">
+                <i class="fa fa-bell-o"></i>
+                <span>设置活动提醒</span>
+            </button>
+        </div>
+        
+        <!-- 背景装饰叶 -->
+        <div class="absolute top-1/4 left-10 text-white/10 animate-float-slow">
+            <i class="fa fa-leaf text-5xl leaf-rotate-1"></i>
+        </div>
+        <div class="absolute bottom-1/4 right-10 text-white/10 animate-float">
+            <i class="fa fa-leaf text-4xl leaf-rotate-2"></i>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-autumn-brown/90 text-white py-10 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center md:text-left">
+                    <div class="mb-4">
+                        <i class="fa fa-leaf text-ginkgo text-3xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-2">辽东学院银杏文化节</h3>
+                    <p class="text-white/80 text-sm">
+                        一年一度的校园文化盛事，展现秋日校园美景与文化魅力
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-ginkgo">快速链接</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 活动地图</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 往期回顾</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 摄影作品展示</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-ginkgo">院系专栏</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#art-college" class="text-white/80 hover:text-art-blue transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 艺术学院</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 文学院</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 商学院</a></li>
+                        <li><a href="#" class="text-white/80 hover:text-ginkgo transition-colors flex items-center gap-1"><i class="fa fa-angle-right text-xs"></i> 计算机学院</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-ginkgo">联系我们</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2 text-white/80">
+                            <i class="fa fa-phone"></i>
+                            <span>学生会: 0415-xxxxxxx</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/80">
+                            <i class="fa fa-envelope-o"></i>
+                            <span>ginkgo@ldu.edu.cn</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-white/80">
+                            <i class="fa fa-weixin"></i>
+                            <span>关注公众号获取更多</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <div class="flex gap-3">
+                            <a href="https://weibo.com/liaodonguniversity" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="fa fa-weibo"></i>
+                            </a>
+                            <a href="https://weixin.qq.com/r/lia8pHXEBih5rTGi93_E" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/liaodong_university" class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-white/10 text-center text-white/60 text-xs">
+                <p>© 2025 辽东学院学生会 版权所有 | 辽ICP备xxxxxxxx号</p>
+                <p class="mt-1">主办单位：辽东学院学生会 | 承办单位：校文艺部、宣传部、艺术学院</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 报名弹窗 -->
+    <div id="registerModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-transform duration-300 scale-95">
+            <div class="p-6 border-b">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-serif text-xl font-bold text-autumn-brown">活动报名</h3>
+                    <button id="closeModal" class="text-gray-400 hover:text-gray-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <form id="registerForm" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ginkgo focus:border-ginkgo transition" placeholder="请输入您的姓名">
+                    </div>
+                    <div>
+                        <label for="studentId" class="block text-sm font-medium text-gray-700 mb-1">学号</label>
+                        <input type="text" id="studentId" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ginkgo focus:border-ginkgo transition" placeholder="请输入您的学号">
+                    </div>
+                    <div>
+                        <label for="department" class="block text-sm font-medium text-gray-700 mb-1">院系</label>
+                        <select id="department" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ginkgo focus:border-ginkgo transition">
+                            <option value="">请选择院系</option>
+                            <option value="art">艺术学院</option>
+                            <option value="computer">计算机学院</option>
+                            <option value="foreign">外国语学院</option>
+                            <option value="business">商学院</option>
+                            <option value="literature">文学院</option>
+                            <option value="other">其他院系</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="activities" class="block text-sm font-medium text-gray-700 mb-1">感兴趣的活动 (可多选)</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors cursor-pointer">
+                                <input type="checkbox" name="activities" value="photo" class="text-ginkgo focus:ring-ginkgo">
+                                <span>银杏摄影大赛</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors cursor-pointer">
+                                <input type="checkbox" name="activities" value="market" class="text-ginkgo focus:ring-ginkgo">
+                                <span>银杏文创市集</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2 hover:bg-autumn-light/20 rounded-lg transition-colors cursor-pointer">
+                                <input type="checkbox" name="activities" value="concert" class="text-ginkgo focus:ring-ginkgo">
+                                <span>秋日音乐会</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2 hover:bg-art-blue/10 rounded-lg transition-colors cursor-pointer">
+                                <input type="checkbox" name="activities" value="art-exhibition" class="text-art-blue focus:ring-art-blue">
+                                <span>银杏艺术创作展</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-2 hover:bg-art-pink/10 rounded-lg transition-colors cursor-pointer">
+                                <input type="checkbox" name="activities" value="workshop" class="text-art-pink focus:ring-art-pink">
+                                <span>银杏叶手工工作坊</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-ginkgo to-ginkgo-dark text-white font-medium py-3 rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                        提交报名
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成功提示弹窗 -->
+    <div id="successToast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2 z-50">
+        <i class="fa fa-check-circle"></i>
+        <span>操作成功！我们期待您的参与</span>
+    </div>
+
+    <!-- 提醒弹窗 -->
+    <div id="remindModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-transform duration-300 scale-95">
+            <div class="p-6 border-b">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-serif text-xl font-bold text-autumn-brown">设置活动提醒</h3>
+                    <button id="closeRemindModal" class="text-gray-400 hover:text-gray-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-4 text-center">
+                    活动开始前我们将通过以下方式提醒您
+                </p>
+                <div class="space-y-3 mb-6">
+                    <label class="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-autumn-light/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-autumn-orange/20 flex items-center justify-center text-autumn-orange">
+                                <i class="fa fa-bell-o text-xs"></i>
+                            </div>
+                            <span>微信公众号推送</span>
+                        </div>
+                        <i class="fa fa-check text-ginkgo-dark"></i>
+                    </label>
+                    <label class="flex items-center justify-between p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-autumn-light/10 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-autumn-orange/20 flex items-center justify-center text-autumn-orange">
+                                <i class="fa fa-envelope-o text-xs"></i>
+                            </div>
+                            <span>校园邮箱提醒</span>
+                        </div>
+                        <i class="fa fa-check text-ginkgo-dark"></i>
+                    </label>
+                </div>
+                <button id="confirmRemindBtn" class="w-full bg-gradient-to-r from-ginkgo to-ginkgo-dark text-white font-medium py-3 rounded-lg shadow hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                    确认设置提醒
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 配置参数 - 方便修改
+        const config = {
+            eventDate: '2025-10-26T09:00:00', // 活动日期
+            primaryColor: 'ginkgo', // 主色调
+            secondaryColor: 'autumn-brown', // 辅助色
+            artColor: 'art-blue', // 艺术学院主色调
+            fallingLeavesCount: 20, // 飘落的叶子数量
+            galleryImagesPerPage: 4, // 每页图片数量
+        };
+        
+        // 图片库数据
+        const galleryImages = [
+            "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1544247583-4e86292510e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1576613232377-82036b843322?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1558610331-9043cc619110?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1544247583-4e86292510e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+            "https://images.unsplash.com/photo-1544842354-1b24107c9469?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+        ];
+        let currentImageIndex = 0;
+        let currentGalleryPage = 1;
+        const totalGalleryPages = Math.ceil(galleryImages.length / config.galleryImagesPerPage);
+        
+        // 创建飘落的银杏叶动画
+        function createFallingLeaves() {
+            const container = document.getElementById('falling-leaves');
+            
+            for (let i = 0; i < config.fallingLeavesCount; i++) {
+                const leaf = document.createElement('div');
+                const size = Math.random() * 20 + 10; // 10-30px
+                const left = Math.random() * 100; // 0-100%
+                const delay = Math.random() * 10; // 0-10s 延迟
+                const duration = Math.random() * 10 + 10; // 10-20s 持续时间
+                const opacity = Math.random() * 0.5 + 0.3; // 0.3-0.8 透明度
+                
+                // 随机选择叶子样式和颜色
+                const leafClasses = ['leaf-rotate-1', 'leaf-rotate-2', 'leaf-rotate-3'];
+                const randomClass = leafClasses[Math.floor(Math.random() * leafClasses.length)];
+                const colors = ['text-ginkgo-dark', 'text-autumn-orange', 'text-autumn-brown', 'text-art-yellow'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                leaf.innerHTML = '<i class="fa fa-leaf"></i>';
+                leaf.className = `absolute ${randomColor} ${randomClass}`;
+                leaf.style.left = `${left}%`;
+                leaf.style.width = `${size}px`;
+                leaf.style.height = `${size}px`;
+                leaf.style.opacity = opacity;
+                leaf.style.animation = `fall ${duration}s linear infinite`;
+                leaf.style.animationDelay = `${delay}s`;
+                
+                container.appendChild(leaf);
+            }
+        }
+        
+        // 倒计时功能
+        function updateCountdown() {
+            try {
+                // 使用配置的活动日期
+                const eventDate = new Date(config.eventDate).getTime();
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                // 处理活动已经开始的情况
+                if (distance < 0) {
+                    document.getElementById('days').innerText = '00';
+                    document.getElementById('hours').innerText = '00';
+                    document.getElementById('minutes').innerText = '00';
+                    document.getElementById('seconds').innerText = '00';
+                    return;
+                }
+
+                // 计算时间差
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // 缓存DOM元素引用
+                const elements = {
+                    days: document.getElementById('days'),
+                    hours: document.getElementById('hours'),
+                    minutes: document.getElementById('minutes'),
+                    seconds: document.getElementById('seconds')
+                };
+
+                // 更新DOM并添加数字变化动画
+                function updateValue(element, value) {
+                    const currentValue = element.innerText;
+                    const formattedValue = value.toString().padStart(2, '0');
+                    
+                    if (currentValue !== formattedValue) {
+                        // 添加变换类
+                        element.classList.add('scale-110');
+                        // 使用requestAnimationFrame确保动画流畅
+                        requestAnimationFrame(() => {
+                            element.innerText = formattedValue;
+                            // 延迟移除变换类
+                            setTimeout(() => {
+                                element.classList.remove('scale-110');
+                            }, 300);
+                        });
+                    }
+                }
+
+                // 更新各时间值
+                updateValue(elements.days, days);
+                updateValue(elements.hours, hours);
+                updateValue(elements.minutes, minutes);
+                updateValue(elements.seconds, seconds);
+            } catch (error) {
+                console.error('更新倒计时出错:', error);
+            }
+        }
+        
+        // 图片查看器功能
+        function setupImageViewer() {
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImage = document.getElementById('viewerImage');
+            const closeViewer = document.getElementById('closeViewer');
+            const prevImage = document.getElementById('prevImage');
+            const nextImage = document.getElementById('nextImage');
+            const imageCounter = document.getElementById('imageCounter');
+            
+            // 打开图片查看器
+            function openViewer(index) {
+                currentImageIndex = index;
+                viewerImage.src = galleryImages[currentImageIndex];
+                viewerImage.alt = `银杏美景 ${currentImageIndex + 1}`;
+                imageCounter.textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+                imageViewer.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // 关闭图片查看器
+            function closeViewerFunc() {
+                imageViewer.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
+            
+            // 上一张图片
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                viewerImage.src = galleryImages[currentImageIndex];
+                imageCounter.textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+                addImageTransition();
+            }
+            
+            // 下一张图片
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                viewerImage.src = galleryImages[currentImageIndex];
+                imageCounter.textContent = `${currentImageIndex + 1}/${galleryImages.length}`;
+                addImageTransition();
+            }
+            
+            // 添加图片切换动画
+            function addImageTransition() {
+                viewerImage.classList.add('opacity-0');
+                setTimeout(() => {
+                    viewerImage.classList.remove('opacity-0');
+                }, 200);
+            }
+            
+            // 点击图片项打开查看器
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                item.addEventListener('click', () => openViewer(index));
+            });
+            
+            // 事件监听
+            closeViewer.addEventListener('click', closeViewerFunc);
+            prevImage.addEventListener('click', showPrevImage);
+            nextImage.addEventListener('click', showNextImage);
+            
+            // 点击外部关闭
+            imageViewer.addEventListener('click', (e) => {
+                if (e.target === imageViewer) closeViewerFunc();
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                if (!imageViewer.classList.contains('pointer-events-none')) {
+                    if (e.key === 'Escape') closeViewerFunc();
+                    if (e.key === 'ArrowLeft') showPrevImage();
+                    if (e.key === 'ArrowRight') showNextImage();
+                }
+            });
+        }
+        
+        // 图片库翻页功能
+        function setupGalleryPagination() {
+            try {
+                const galleryPages = document.querySelectorAll('.gallery-page');
+                const prevBtn = document.getElementById('prevGallery');
+                const nextBtn = document.getElementById('nextGallery');
+                const pageInfo = document.getElementById('galleryPageInfo');
+                
+                // 检查必要的DOM元素是否存在
+                if (!prevBtn || !nextBtn || !pageInfo || galleryPages.length === 0) {
+                    console.warn('图片库分页功能所需的DOM元素不完整');
+                    return;
+                }
+                
+                // 缓存显示状态，减少不必要的DOM操作
+                const displayCache = new Array(galleryPages.length).fill(false);
+                
+                // 更新分页信息
+                function updateGalleryPageInfo() {
+                    // 使用模板字符串和数字格式化
+                    pageInfo.textContent = `第 ${currentGalleryPage} 页 / 共 ${totalGalleryPages} 页`;
+                    
+                    // 更新按钮状态和样式
+                    prevBtn.disabled = currentGalleryPage === 1;
+                    nextBtn.disabled = currentGalleryPage === totalGalleryPages;
+                    
+                    // 使用CSS过渡效果增强视觉反馈
+                    prevBtn.classList.toggle('opacity-50', currentGalleryPage === 1);
+                    nextBtn.classList.toggle('opacity-50', currentGalleryPage === totalGalleryPages);
+                }
+                
+                // 显示指定页
+                function showGalleryPage(pageNum) {
+                    // 验证页码
+                    if (pageNum < 1 || pageNum > totalGalleryPages) {
+                        console.warn('无效的页码:', pageNum);
+                        return;
+                    }
+                    
+                    // 优化DOM操作：只修改需要改变的元素
+                    galleryPages.forEach((page, index) => {
+                        const shouldBeActive = index + 1 === pageNum;
+                        
+                        if (shouldBeActive !== displayCache[index]) {
+                            displayCache[index] = shouldBeActive;
+                            
+                            if (shouldBeActive) {
+                                page.classList.remove('hidden');
+                                // 使用requestAnimationFrame确保动画平滑
+                                requestAnimationFrame(() => {
+                                    page.classList.add('active', 'animate-page-in');
+                                });
+                            } else {
+                                page.classList.remove('active', 'animate-page-in');
+                                page.classList.add('hidden');
+                            }
+                        }
+                    });
+                    
+                    updateGalleryPageInfo();
+                }
+                
+                // 添加键盘导航支持
+                function handleGalleryKeyDown(e) {
+                    if (e.key === 'ArrowLeft') {
+                        if (currentGalleryPage > 1) {
+                            currentGalleryPage--;
+                            showGalleryPage(currentGalleryPage);
+                        }
+                    } else if (e.key === 'ArrowRight') {
+                        if (currentGalleryPage < totalGalleryPages) {
+                            currentGalleryPage++;
+                            showGalleryPage(currentGalleryPage);
+                        }
+                    }
+                }
+                
+                // 事件监听
+                prevBtn.addEventListener('click', () => {
+                    if (currentGalleryPage > 1) {
+                        currentGalleryPage--;
+                        showGalleryPage(currentGalleryPage);
+                    }
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    if (currentGalleryPage < totalGalleryPages) {
+                        currentGalleryPage++;
+                        showGalleryPage(currentGalleryPage);
+                    }
+                });
+                
+                // 添加键盘事件监听
+                document.addEventListener('keydown', handleGalleryKeyDown);
+                
+                // 添加页面调整大小时的自适应
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        // 重新显示当前页，确保布局正确
+                        showGalleryPage(currentGalleryPage);
+                    }, 300);
+                });
+                
+                // 初始化
+                updateGalleryPageInfo();
+                
+            } catch (error) {
+                console.error('图片库分页功能设置出错:', error);
+            }
+        }
+        
+        // 日程表翻页功能
+        function setupSchedulePagination() {
+            try {
+                const schedulePages = document.querySelectorAll('.schedule-page');
+                const prevBtn = document.getElementById('prevSchedule');
+                const nextBtn = document.getElementById('nextSchedule');
+                const pageTitle = document.getElementById('schedulePageTitle');
+                const pageTitles = ['10月26日 活动安排', '10月27日 活动安排', '10月28日 活动安排'];
+                let currentSchedulePage = 1;
+                const totalSchedulePages = schedulePages.length;
+                
+                // 检查必要的DOM元素是否存在
+                if (!prevBtn || !nextBtn || !pageTitle || schedulePages.length === 0) {
+                    console.warn('日程表分页功能所需的DOM元素不完整');
+                    return;
+                }
+                
+                // 缓存显示状态，减少不必要的DOM操作
+                const displayCache = new Array(schedulePages.length).fill(false);
+                
+                // 更新分页信息
+                function updateSchedulePageInfo() {
+                    // 确保当前页码有效
+                    if (currentSchedulePage > 0 && currentSchedulePage <= pageTitles.length) {
+                        pageTitle.textContent = pageTitles[currentSchedulePage - 1];
+                    }
+                    
+                    // 更新按钮状态和样式
+                    prevBtn.disabled = currentSchedulePage === 1;
+                    nextBtn.disabled = currentSchedulePage === totalSchedulePages;
+                    
+                    // 使用CSS过渡效果增强视觉反馈
+                    prevBtn.classList.toggle('opacity-50', currentSchedulePage === 1);
+                    nextBtn.classList.toggle('opacity-50', currentSchedulePage === totalSchedulePages);
+                }
+                
+                // 显示指定页
+                function showSchedulePage(pageNum) {
+                    // 验证页码
+                    if (pageNum < 1 || pageNum > totalSchedulePages) {
+                        console.warn('无效的日程表页码:', pageNum);
+                        return;
+                    }
+                    
+                    // 优化DOM操作：只修改需要改变的元素
+                    schedulePages.forEach((page, index) => {
+                        const shouldBeActive = index + 1 === pageNum;
+                        
+                        if (shouldBeActive !== displayCache[index]) {
+                            displayCache[index] = shouldBeActive;
+                            
+                            if (shouldBeActive) {
+                                page.classList.remove('hidden');
+                                // 使用requestAnimationFrame确保动画平滑
+                                requestAnimationFrame(() => {
+                                    page.classList.add('active', 'animate-page-in');
+                                });
+                            } else {
+                                page.classList.remove('active', 'animate-page-in');
+                                page.classList.add('hidden');
+                            }
+                        }
+                    });
+                    
+                    updateSchedulePageInfo();
+                }
+                
+                // 添加键盘导航支持
+                function handleScheduleKeyDown(e) {
+                    if (e.key === 'ArrowLeft') {
+                        if (currentSchedulePage > 1) {
+                            currentSchedulePage--;
+                            showSchedulePage(currentSchedulePage);
+                        }
+                    } else if (e.key === 'ArrowRight') {
+                        if (currentSchedulePage < totalSchedulePages) {
+                            currentSchedulePage++;
+                            showSchedulePage(currentSchedulePage);
+                        }
+                    }
+                }
+                
+                // 事件监听
+                prevBtn.addEventListener('click', () => {
+                    if (currentSchedulePage > 1) {
+                        currentSchedulePage--;
+                        showSchedulePage(currentSchedulePage);
+                    }
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    if (currentSchedulePage < totalSchedulePages) {
+                        currentSchedulePage++;
+                        showSchedulePage(currentSchedulePage);
+                    }
+                });
+                
+                // 添加键盘事件监听
+                document.addEventListener('keydown', handleScheduleKeyDown);
+                
+                // 添加页面调整大小时的自适应
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        // 重新显示当前页，确保布局正确
+                        showSchedulePage(currentSchedulePage);
+                    }, 300);
+                });
+                
+                // 初始化
+                updateSchedulePageInfo();
+                
+            } catch (error) {
+                console.error('日程表分页功能设置出错:', error);
+            }
+        }
+        
+        // 加载更多图片
+        function setupLoadMoreImages() {
+            try {
+                const loadMoreBtn = document.getElementById('loadMoreBtn');
+                const galleryContainer = document.querySelector('#galleryContainer');
+                
+                // 检查必要的DOM元素是否存在
+                if (!loadMoreBtn || !galleryContainer) {
+                    console.warn('加载更多图片功能所需的DOM元素不完整');
+                    return;
+                }
+                
+                // 额外图片
+                const moreImages = [
+                    "https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "https://images.unsplash.com/photo-1558610331-9043cc619110?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "https://images.unsplash.com/photo-1576613232377-82036b843322?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                ];
+                
+                let imagesLoaded = false;
+                let isLoading = false;
+                
+                // 图片预加载函数
+                function preloadImages(images, callback) {
+                    let loadedCount = 0;
+                    const total = images.length;
+                    const loadedImages = [];
+                    
+                    if (total === 0) {
+                        callback([]);
+                        return;
+                    }
+                    
+                    images.forEach((src, index) => {
+                        const img = new Image();
+                        img.onload = () => {
+                            loadedImages[index] = src;
+                            loadedCount++;
+                            
+                            if (loadedCount === total) {
+                                callback(loadedImages);
+                            }
+                        };
+                        img.onerror = () => {
+                            console.warn(`图片加载失败: ${src}`);
+                            loadedCount++;
+                            
+                            if (loadedCount === total) {
+                                // 过滤掉加载失败的图片
+                                callback(loadedImages.filter(img => img));
+                            }
+                        };
+                        img.src = src;
+                    });
+                }
+                
+                loadMoreBtn.addEventListener('click', () => {
+                    if (!imagesLoaded && !isLoading) {
+                        isLoading = true;
+                        // 添加加载动画
+                        const originalContent = loadMoreBtn.innerHTML;
+                        loadMoreBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> 加载中...';
+                        loadMoreBtn.disabled = true;
+                        loadMoreBtn.classList.add('opacity-70');
+                        
+                        // 预加载图片以提高用户体验
+                        preloadImages(moreImages, (loadedImagesList) => {
+                            // 模拟网络延迟
+                            setTimeout(() => {
+                                if (loadedImagesList.length > 0) {
+                                    // 创建新的图片页
+                                    const newPage = document.createElement('div');
+                                    newPage.className = 'gallery-page hidden';
+                                    newPage.innerHTML = '<div class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>';
+                                    galleryContainer.appendChild(newPage);
+                                    
+                                    const imageGrid = newPage.querySelector('.grid');
+                                    
+                                    // 记录添加了多少图片
+                                    let addedCount = 0;
+                                    
+                                    loadedImagesList.forEach((img, index) => {
+                                        if (img) { // 确保图片已加载
+                                            // 交错添加图片以获得动画效果
+                                            setTimeout(() => {
+                                                const imageWrapper = document.createElement('div');
+                                                imageWrapper.className = 'rounded-lg overflow-hidden shadow-md transform transition-transform duration-500 hover:scale-110 hover:z-10 cursor-pointer gallery-item opacity-0';
+                                                imageWrapper.style.animation = `fadeIn 0.5s ease-out forwards ${index * 0.1}s`;
+                                                imageWrapper.dataset.img = img;
+                                                
+                                                const imgElement = document.createElement('img');
+                                                imgElement.src = img;
+                                                imgElement.alt = `银杏美景 ${galleryImages.length + index + 1}`;
+                                                imgElement.className = 'w-full h-full object-cover';
+                                                
+                                                imageWrapper.appendChild(imgElement);
+                                                imageGrid.appendChild(imageWrapper);
+                                                
+                                                // 添加到图片库
+                                                galleryImages.push(img);
+                                                addedCount++;
+                                                
+                                                // 为新添加的图片绑定点击事件
+                                                imageWrapper.addEventListener('click', () => {
+                                                    const index = galleryImages.indexOf(img);
+                                                    document.getElementById('imageViewer').classList.remove('opacity-0', 'pointer-events-none');
+                                                    document.getElementById('viewerImage').src = img;
+                                                    document.getElementById('imageCounter').textContent = `${index + 1}/${galleryImages.length}`;
+                                                    currentImageIndex = index;
+                                                    document.body.style.overflow = 'hidden';
+                                                });
+                                            }, index * 150);
+                                        }
+                                    });
+                                    
+                                    // 所有图片添加完成后的回调
+                                    setTimeout(() => {
+                                        // 更新分页信息
+                                        if (addedCount > 0) {
+                                            currentGalleryPage = totalGalleryPages + 1;
+                                            totalGalleryPages++;
+                                            setupGalleryPagination();
+                                            showGalleryPage(currentGalleryPage);
+                                        }
+                                        
+                                        // 更新按钮状态
+                                        loadMoreBtn.innerHTML = '<span>已加载全部</span><i class="fa fa-check ml-1"></i>';
+                                        loadMoreBtn.disabled = true;
+                                        loadMoreBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                                        imagesLoaded = true;
+                                    }, loadedImagesList.length * 150 + 100);
+                                } else {
+                                    // 所有图片加载失败的情况
+                                    loadMoreBtn.innerHTML = originalContent;
+                                    loadMoreBtn.disabled = false;
+                                    loadMoreBtn.classList.remove('opacity-70');
+                                    showSuccessToast('图片加载失败，请稍后再试');
+                                }
+                                
+                                isLoading = false;
+                            }, 800); // 减少等待时间，提升用户体验
+                        });
+                    }
+                });
+                
+            } catch (error) {
+                console.error('加载更多图片功能设置出错:', error);
+            }
+        }
+        
+        // 收藏功能
+        function setupFavoriteFeature() {
+            const favoriteBtn = document.getElementById('favoriteBtn');
+            let isFavorite = false;
+
+            favoriteBtn.addEventListener('click', () => {
+                isFavorite = !isFavorite;
+                if (isFavorite) {
+                    favoriteBtn.innerHTML = '<i class="fa fa-heart"></i>';
+                    favoriteBtn.classList.add('text-red-500');
+                    showSuccessToast('已收藏活动');
+                } else {
+                    favoriteBtn.innerHTML = '<i class="fa fa-heart-o"></i>';
+                    favoriteBtn.classList.remove('text-red-500');
+                    showSuccessToast('已取消收藏');
+                }
+            });
+        }
+
+        // 日程表交互
+        function setupScheduleInteraction() {
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+
+            scheduleItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const eventTitle = item.querySelector('.font-medium').textContent;
+                    showSuccessToast(`已选择: ${eventTitle}`);
+                });
+            });
+        }
+
+        // 分享功能
+        function setupShareFeature() {
+            const shareBtn = document.getElementById('shareBtn');
+
+            shareBtn.addEventListener('click', () => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: '辽东学院银杏文化节',
+                        text: '一起来参加辽东学院第九届银杏文化节吧！10月26日至28日，与你共赴金色之约',
+                        url: window.location.href
+                    }).then(() => {
+                        showSuccessToast('分享成功');
+                    }).catch((error) => {
+                        console.log('分享失败:', error);
+                    });
+                } else {
+                    // 复制链接到剪贴板
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        showSuccessToast('链接已复制到剪贴板');
+                    }).catch(err => {
+                        console.error('无法复制链接: ', err);
+                    });
+                }
+            });
+        }
+        
+        // 初始化页面
+        function init() {
+            createFallingLeaves();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            setupEventListeners();
+            setupScrollAnimations();
+            setupImageViewer();
+            setupGalleryPagination();
+            setupSchedulePagination();
+            setupLoadMoreImages();
+            setupFavoriteFeature();
+            setupScheduleInteraction();
+            setupShareFeature();
+        }
+        
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 报名弹窗相关
+            const registerBtn = document.getElementById('registerBtn');
+            const registerModal = document.getElementById('registerModal');
+            const closeModal = document.getElementById('closeModal');
+            const registerForm = document.getElementById('registerForm');
+            const successToast = document.getElementById('successToast');
+            
+            // 提醒弹窗相关
+            const remindBtn = document.getElementById('remindBtn');
+            const remindModal = document.getElementById('remindModal');
+            const closeRemindModal = document.getElementById('closeRemindModal');
+            const confirmRemindBtn = document.getElementById('confirmRemindBtn');
+            
+            function openModal(modal) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeModalFunc(modal) {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modal.querySelector('div').classList.remove('scale-100');
+                modal.querySelector('div').classList.add('scale-95');
+                document.body.style.overflow = '';
+            }
+            
+            window.showSuccessToast = function(message = '操作成功！') {
+                successToast.querySelector('span').textContent = message;
+                successToast.classList.remove('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    successToast.classList.add('opacity-0', 'pointer-events-none');
+                }, 3000);
+            }
+            
+            registerBtn.addEventListener('click', () => openModal(registerModal));
+            closeModal.addEventListener('click', () => closeModalFunc(registerModal));
+            
+            remindBtn.addEventListener('click', () => openModal(remindModal));
+            closeRemindModal.addEventListener('click', () => closeModalFunc(remindModal));
+            confirmRemindBtn.addEventListener('click', () => {
+                closeModalFunc(remindModal);
+                showSuccessToast('提醒设置成功');
+            });
+            
+            // 点击弹窗外部关闭
+            registerModal.addEventListener('click', (e) => {
+                if (e.target === registerModal) closeModalFunc(registerModal);
+            });
+            
+            remindModal.addEventListener('click', (e) => {
+                if (e.target === remindModal) closeModalFunc(remindModal);
+            });
+            
+            // 表单提交
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // 简单表单验证
+                const name = document.getElementById('name').value;
+                const studentId = document.getElementById('studentId').value;
+                const department = document.getElementById('department').value;
+                
+                if (!name || !studentId || !department) {
+                    alert('请填写完整信息');
+                    return;
+                }
+                
+                // 模拟表单提交
+                closeModalFunc(registerModal);
+                showSuccessToast('报名成功！我们期待您的参与');
+                
+                // 重置表单
+                registerForm.reset();
+            });
+            
+            // 滚动时导航栏效果
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('py-2', 'shadow');
+                    nav.classList.remove('py-3');
+                } else {
+                    nav.classList.add('py-3');
+                    nav.classList.remove('py-2', 'shadow');
+                }
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // 设置滚动动画
+        function setupScrollAnimations() {
+            // 监听滚动，为元素添加动画
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // 对所有需要动画的元素进行观察
+            document.querySelectorAll('section > div > div').forEach(el => {
+                el.style.opacity = '0';
+                observer.observe(el);
+            });
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+
+</body></html>
